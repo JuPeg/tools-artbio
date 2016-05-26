@@ -1067,11 +1067,11 @@ foreach \$id (\@ids) {
   }
 
   if ($bl_STDIN) {
-    \$cmd = `$bl2 -i $seq_dir/\$id | $script_name -J parse_blout $bl_dir/\$id -c $NR_clstr -ce $NR_clstre -aS $opt_aS -aL $opt_aL -G $g_iden -prog $blast_prog -bs 1`;
+    \$cmd = `$bl2 -i $seq_dir/\$id | perl $script_name -J parse_blout $bl_dir/\$id -c $NR_clstr -ce $NR_clstre -aS $opt_aS -aL $opt_aL -G $g_iden -prog $blast_prog -bs 1`;
   }
   else {
     \$cmd = `$bl2 -i $seq_dir/\$id -o $bl_dir/\$id`;
-    \$cmd =                         `$script_name -J parse_blout $bl_dir/\$id -c $NR_clstr -ce $NR_clstre -aS $opt_aS -aL $opt_aL -G $g_iden -prog $blast_prog -bs 0`;
+    \$cmd =                         `perl $script_name -J parse_blout $bl_dir/\$id -c $NR_clstr -ce $NR_clstre -aS $opt_aS -aL $opt_aL -G $g_iden -prog $blast_prog -bs 0`;
   }
   \$cmd = `rm -f  $seq_dir/\$id`;
   \$cmd = `rm -f  $seq_dir/\$id.lock`;
