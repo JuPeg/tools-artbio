@@ -1,0 +1,158 @@
+<tool id="psi-cd-hit" name="PSI-CD-HIT" version="0.1.0">
+    <requirements>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command interpreter="perl"><![CDATA[
+        psi-cd-hit.pl -i "$input1" -o "$output1" -c $id
+		#if $moreoptions.options == "advanced"
+		-G $moreoptions.identity
+		-aL $moreoptions.alcovlong
+		-aS $moreoptions.alcovshort
+		-g $moreoptions.g
+		-circle $moreoptions.circle
+		-prog $moreoptions.prog
+		#end if
+    ]]></command>
+    <inputs>
+        <param type="data" name="input1" label="Redundant fasta file"  format="fasta" />
+	<param name="id" type="float" label="Clustering threshold (sequence identity)" value="0.9" />
+	<conditional name="moreoptions">
+		<param name="options" type="select" label="Specify more options:">
+			<option value="simple" selected="true">No, use program defaults.</option>
+			<option value="advanced">Yes, see full parameter list.</option>
+		</param>
+		<when value="simple">
+		</when>
+		<when value="advanced">
+			<param name="identity" type="select" label="Identity:">
+				<option value="0">Local</option>
+				<option value="1" selected="true">Global</option>
+			</param>
+			<param name="alcovlong" type="float" label="Alignement coverage for the longer sequence" value="0.0" />
+                        <param name="alcovshort" type="float" label="Alignement coverage for the shorter sequence" value="0.0" />
+			<param name="g" type="select" label="Cluster sequence into the most similar cluster?">
+				<option value="1" selected="true">Yes (accurate but slow)</option>
+				<option value="0">No, cluster to the first cluster that meet the threshold (fast)</option>
+			</param>
+			<param name="circle" type="select" label="Treat sequences as circular sequences?">
+                                <option value="1">Yes</option>
+                                <option value="0" selected="true">No</option>
+                        </param>
+			<param name="prog" type="select" label="Program">
+				<option value="blastp">blastp</option>
+                		<option value="blastn">blastn</option>
+                		<option value="megablast" selected="true">megablast</option>
+                		<option value="blastpgp">blastpgp</option>
+			</param>
+		</when>
+	</conditional>
+    </inputs>
+    <outputs>
+        <data name="output1" format="fasta" />
+	<data name="output2" format="clstr" />
+    </outputs>
+    <tests>
+        <test>
+        	<param name="input1" value="input.fasta"/>
+        	<param name="id" value="0.9"/>
+		<param name="moreoptions.options" value="simple"/>
+		<param name="moreoptions.prog" value="megablast"/>
+                <param name="moreoptions.identity" value="1"/>
+                <param name="moreoptions.alcovlong" value="0"/>
+                <param name="moreoptions.alcovshort" value="0"/>
+                <param name="moreoptions.g" value="1"/>
+		<param name="moreoptions.circle" value="0"/>
+		<output name="output1" file="output.fasta"/>
+	    	<output name="output2" file="output.clstr"/>
+        </test>
+    </tests>
+    <help><![CDATA[
+**Options** 
+
+  * input/output:
+    -i  in_dbname, required
+    -o  out_dbname, required
+    -l  length_of_throw_away_sequences, default 10
+
+  thresholds:
+    -c  clustering threshold (sequence identity), default 0.3
+    -ce clustering threshold (blast expect), default -1, 
+        it means by default it doesn't use expect threshold, 
+        but with positive value, the program cluster seqs if similarities
+        meet either identity threshold or expect threshold 
+    -G  (1/0) use global identity? default 1(global)
+        if you prefer to use -G 0(local), it is suggested that you also
+        use -aS, -aL, such as -aS 0.8, to prevent very short matches.
+    -aL	alignment coverage for the longer sequence, default 0.0
+ 	if set to 0.9, the alignment must covers 90% of the sequence
+    -aS	alignment coverage for the shorter sequence, default 0.0
+ 	if set to 0.9, the alignment must covers 90% of the sequence
+    -g  (1/0), default 0
+        by cd-hit's default algorithm, a sequence is clustered to the first 
+        cluster that meet the threshold (fast cluster). If set to 1, the program
+        will cluster it into the most similar cluster that meet the threshold
+        (accurate but slow mode)
+        but either 1 or 0 won't change the representatives of final clusters
+    -circle (1/0), default 0
+        when set to 1, treat sequences as circular sequence.
+        bacterial genomes, plasmids are circular, but their genome coordinate maybe arbitary, 
+        
+   program:
+     -prog (blastp, blastn, megablast, blastpgp), default blastp 
+     -p  profile search para, default
+           "-j 3 -F F -e 0.001 -b 500 -v 500"
+     -dprof database for building PSSM, default using input
+         you can also use another database that is more comprehensive like NR80
+     -s  blast search para, default
+           "-F F -e 0.000001 -b 100000 -v 100000"
+     -bs (1/0) default 1
+        pipe blast results from into parser instead of save in hard drive (save time)
+
+   compute:
+     -exec (qsub, local) default local
+          this program writes a shell script to run blast, this script is
+          either performed locally by sh or remotely by qsub
+          with qsub, you can use PBS, SGE etc
+     -host number of hosts for qsub 
+     -core number of cpu cores per computer, default 1
+     -shf a filename for add local settings into the job shell script
+          for example, when you run PBS jobs, you can add quene name etc in this
+	  file and this script will add them into the job shell script
+  job:
+    -rs steps of save restart file and clustering output, default 5000
+        everytime after process 5000 sequences, program write a 
+        restart file and current clustering information
+    -restart restart file, readin a restart file
+        if program crash, stoped, termitated, you can restart it by
+        add a option "-restart sth.restart"
+    -rf steps of re format blast database, default 200,000
+        if program clustered 200,000 seqs, it remove them from seq
+        pool, and re format blast db to save time
+    -J  job, job_file, exe specific jobs like parse blast outonly
+        DON'T use it, it is only used by this program itself
+    -k (1/0) keep blast raw output file, default 0
+
+    -P path to executables
+
+ ]]></help>
+    <citations>
+	<citation type="bibtex">@ARTICLE{cluster,
+		author = {Weizhong Li, Lukasz Jaroszewski, Adam Godzik},
+		title = {Clustering of highly homologous sequences to reduce thesize of large protein database},
+		journal = {Bioinformatics},
+		year = {2001},
+		volume = {17},
+		pages = {282-283}
+	}</citation>
+        <citation type="bibtex">@ARTICLE{cd-hit,
+                author = {Weizhong Li, Lukasz Jaroszewski, Adam Godzik},
+                title = {Cd-hit: a fast program for clustering and comparing large sets of protein or nucleotide sequences},
+                journal = {Bioinformatics},
+                year = {2006},
+                volume = {22},
+                pages = {1658-1659}
+        }</citation>
+    </citations>
+</tool>
