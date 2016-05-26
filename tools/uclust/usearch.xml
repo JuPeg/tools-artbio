@@ -1,0 +1,44 @@
+<tool id="usearch" name="UCLUST" version="0.1.0">
+    <description>with small memory use</description>
+    <requirements>
+        <requirement type="package" version="8.1">usearch</requirement>
+    </requirements>
+    <stdio>
+        <exit_code range="1:" />
+    </stdio>
+    <command><![CDATA[
+        usearch -cluster_smallmem $input -id $id -sortedby length -uc $uc -centroids $centroids
+    ]]></command>
+    <inputs>
+	<param type="data" name="input" format="fasta" />
+	<param name="id" value="0.9" label="Identity" type="float" />
+    </inputs>
+    <outputs>
+	<data name="uc" format="tabular" />
+	<data name="centroids" format="fasta" />
+    </outputs>
+    <tests>
+	<test>
+	     <param name="input" value="input.fasta" />
+	     <param name="id" value="0.9" />
+	     <output name="uc" file="result.uc" />
+	     <output name="centroids" file="result.fasta" />
+	</test>
+    </tests>
+    <help><![CDATA[
+        **What it does**
+
+        This tool uses the algorithm cluster_smallmem designed to minimize memory use. 
+
+        .. class:: warningmark  
+
+	Please, make sure the input sequences are sorted by decreasing length.
+
+	An identity threshold between 0.0 and 1.0 must be specified. This indicates the minimum identity that sequences must present to be clustered together.
+
+	For more information, please consult the USEARCH documentation at http://www.drive5.com/usearch/manual/.
+    ]]></help>
+    <citations>
+	<citation type="doi">10.1093/bioinformatics/btq461</citation>
+    </citations>
+</tool>
