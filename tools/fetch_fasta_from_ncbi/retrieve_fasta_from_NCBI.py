@@ -274,13 +274,13 @@ def __main__():
 
     query=options.query_string
     try:
-  	bins=map(int,options.bins.split(" "))
+	bins=map(int,options.bins.split(" "))
 	for i in range(len(bins)-1):
-        	options.query_string=query+" AND "+str(bins[i]+1)+":"+str(bins[i+1])+"[Sequence Length]"
-        	print options.query_string
-        	E = Eutils(options, logger)
-        	E.retrieve()
-    except:
+		options.query_string=query+" AND "+str(bins[i]+1)+":"+str(bins[i+1])+"[Sequence Length]"
+		print options.query_string
+		E = Eutils(options, logger)
+		E.retrieve()
+    except ValueError :
 	print "Retrieving without sequence length binning"
 	E=Eutils(options,logger)
 	E.retrieve()
