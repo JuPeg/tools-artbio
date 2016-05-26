@@ -1,0 +1,172 @@
+>Cluster 0
+0	32965aa, >gi|672550884|ref|NC_024684.1|_Lizard_adenovirus_2_isolate_23-06,_complete_genome... *
+1	32965aa, >gi|669340560|gb|KJ156523.1|_Lizard_adenovirus_2_isolate_23-06,_complete_genome... at 0.0/32965aa/100%
+>Cluster 1
+0	32939aa, >gi|927819846|gb|KP329563.1|_Simian_adenovirus_13_strain_P-9,_complete_genome... *
+1	32939aa, >gi|944325197|ref|NC_028103.1|_Simian_adenovirus_13_strain_P-9,_complete_genome... at 0.0/32939aa/100%
+>Cluster 2
+0	32802aa, >gi|51510466|emb|CQ854906.1|_Sequence_3_from_Patent_WO2004066947... *
+1	32802aa, >gi|134125964|dbj|DD417903.1|_Treatment_for_Metastatic_Cancer... at 0.0/32802aa/100%
+2	32790aa, >gi|384368282|emb|JA780924.1|_Sequence_7_from_Patent_WO2012042279... at 0.0/24352:4938:454aa/90.68%
+3	31976aa, >gi|134125962|dbj|DD417901.1|_Treatment_for_Metastatic_Cancer... at 0.0/29475:2501aa/99.99%
+4	31976aa, >gi|51510465|emb|CQ854905.1|_Sequence_2_from_Patent_WO2004066947... at 0.0/29475:2501aa/100%
+5	31976aa, >gi|51510464|emb|CQ854904.1|_Sequence_1_from_Patent_WO2004066947... at 0.0/29475:2501aa/99.99%
+6	31976aa, >gi|134125963|dbj|DD417902.1|_Treatment_for_Metastatic_Cancer... at 0.0/29475:2501aa/100%
+>Cluster 3
+0	32798aa, >gi|410126331|dbj|HV777378.1|_JP_2012139220-A/1:_REPLICATION_DEFICIENT_ADENOVIRAL_TNF_VECTOR... *
+1	32798aa, >gi|19576990|emb|AX382187.1|_Sequence_1_from_Patent_WO0200906... at 0.0/32798aa/100%
+>Cluster 4
+0	32690aa, >gi|347602198|gb|JN418926.1|_Equine_adenovirus_1_strain_M1,_complete_genome... *
+>Cluster 5
+0	32661aa, >gi|697995511|gb|KM190146.1|_Simian_adenovirus_DM-2014_isolate_23336,_complete_genome... *
+1	32661aa, >gi|723633163|ref|NC_025678.1|_Simian_adenovirus_DM-2014_isolate_23336,_complete_genome... at 0.0/32661aa/100%
+>Cluster 6
+0	32621aa, >gi|13446708|gb|AF289262.1|_Porcine_adenovirus_5,_complete_genome... *
+1	32621aa, >gi|13487858|ref|NC_002702.1|_Porcine_adenovirus_C,_complete_genome... at 0.0/32621aa/100%
+2	32621aa, >gi|56160566|ref|AC_000009.1|_Porcine_adenovirus_C,_complete_genome... at 0.0/32621aa/100%
+>Cluster 7
+0	32480aa, >gi|188564457|dbj|DJ388094.1|_VECTORS_FOR_OCULAR_TRANSDUCTION_AND_USE_THEREFOR_FOR_GENETIC_THERAPY... *
+1	32480aa, >gi|33077984|dbj|BD268216.1|_Adenovirus_vector,_packaging_cell_line,_composition_and_method_for_prod... at 0.0/32480aa/100%
+>Cluster 8
+0	32480aa, >gi|27452769|gb|AY170314.1|_Porcine_lymphotropic_herpesvirus_2_isolate_546_long_unique_region,_parti... *
+>Cluster 9
+0	32442aa, >gi|330368803|gb|HQ659699.1|_Human_adenovirus_7_strain_gz07,_complete_genome... *
+>Cluster 10
+0	32407aa, >gi|207026030|dbj|DL137102.1|_new_adenovirus_and_the_medicine_containing_adenovirus... *
+1	32407aa, >gi|197270693|dbj|DL073929.1|_new_adenovirus_and_the_medicine_containing_adenovirus... at 0.0/32407aa/100%
+>Cluster 11
+0	32392aa, >gi|19700846|emb|AX392737.1|_Sequence_27_from_Patent_WO0212526... *
+>Cluster 12
+0	32327aa, >gi|134105495|gb|EF011630.1|_Human_adenovirus_B_strain_ColoAd1,_complete_genome... *
+1	32325aa, >gi|197275985|dbj|DL076444.1|_Chimeric_Adenoviruses_for_Use_in_Cancer_Treatment... at 0.0/32325aa/100%
+2	32325aa, >gi|218581637|emb|GM714635.1|_Sequence_3_from_Patent_WO2008080003... at 0.0/32325aa/100%
+3	32325aa, >gi|84658366|emb|CS242854.1|_Sequence_1_from_Patent_WO2005118825... at 0.0/32325aa/100%
+4	32325aa, >gi|109943866|emb|CS326326.1|_Sequence_22_from_Patent_WO2006060314... at 0.0/32325aa/100%
+5	32325aa, >gi|308034685|dbj|FW376177.1|_Generation_of_Oncolytic_Adenoviruses_and_Uses_Thereof... at 0.0/32325aa/100%
+>Cluster 13
+0	32308aa, >gi|22122227|ref|NC_004087.1|_Sulfolobus_islandicus_rod-shaped_virus_1,_complete_genome... *
+1	32308aa, >gi|19171527|emb|AJ414696.1|_Sulfolobus_virus_SIRV-1_complete_viral_genome... at 0.0/32308aa/100%
+>Cluster 14
+0	32108aa, >gi|57753378|ref|NC_006649.1|_Cotesia_congregata_virus_complete_genome,_segment_Circle18... *
+1	32108aa, >gi|54109794|emb|AJ632320.1|_Cotesia_congregata_virus_complete_genome,_segment_Circle18... at 0.0/32108aa/100%
+>Cluster 15
+0	32020aa, >gi|295039993|emb|HC469244.1|_Sequence_5_from_Patent_EP2163260... *
+>Cluster 16
+0	31972aa, >gi|57753388|ref|NC_006646.1|_Cotesia_congregata_virus_complete_genome,_segment_Circle14... *
+1	31972aa, >gi|54109776|emb|AJ632317.1|_Cotesia_congregata_virus_complete_genome,_segment_Circle14... at 0.0/31972aa/100%
+>Cluster 17
+0	31967aa, >gi|540155826|ref|NC_022266.1|_Simian_adenovirus_18,_complete_genome... *
+1	31967aa, >gi|58191001|emb|CQ982407.1|_Sequence_12_from_Patent_WO2005001103... at 0.0/31967aa/100%
+2	31967aa, >gi|186946583|dbj|DJ352123.1|_Methods_of_Generating_Chimeric_Adenoviruses_and_Uses_For_Such_Chimeric... at 0.0/31967aa/100%
+3	31967aa, >gi|219522378|gb|FJ025931.1|_Simian_adenovirus_18,_complete_genome... at 0.0/31967aa/100%
+>Cluster 18
+0	31848aa, >gi|918020092|ref|NC_027708.1|_Skunk_adenovirus_PB1,_complete_genome... *
+1	31848aa, >gi|823668872|gb|KP238322.1|_Skunk_adenovirus_PB1,_complete_genome... at 0.0/31848aa/100%
+>Cluster 19
+0	31787aa, >gi|62147343|emb|AJ854042.1|_Acidianus_filamentous_virus_2,_partial_genome... *
+1	31787aa, >gi|157929273|ref|NC_009884.1|_Acidianus_filamentous_virus_2,_complete_genome... at 0.0/31787aa/100%
+>Cluster 20
+0	31775aa, >gi|564010165|gb|KF793826.1|_Bottlenose_dolphin_coronavirus_HKU22_isolate_CF090331,_complete_genome... *
+1	31769aa, >gi|564010136|gb|KF793824.1|_Bottlenose_dolphin_coronavirus_HKU22_isolate_CF090325,_complete_genome... at 0.0/31778aa/99.79%
+2	31766aa, >gi|564010151|gb|KF793825.1|_Bottlenose_dolphin_coronavirus_HKU22_isolate_CF090327,_complete_genome... at 0.0/31778aa/99.72%
+>Cluster 21
+0	31735aa, >gi|738838584|ref|NC_025962.1|_Psittacine_adenovirus_3_isolate_HKU/Parrot19,_complete_genome... *
+1	31735aa, >gi|730229474|gb|KJ675568.1|_Psittacine_adenovirus_3_isolate_HKU/Parrot19,_complete_genome... at 0.0/31735aa/100%
+>Cluster 22
+0	31710aa, >gi|190343066|gb|EU001270.1|_Glyptapanteles_flavicoxis_bracovirus_segment_13,_complete_sequence... *
+>Cluster 23
+0	31709aa, >gi|636774152|gb|KJ563221.1|_California_sea_lion_adenovirus_1_strain_Zc11-030,_complete_genome... *
+1	31709aa, >gi|641406604|ref|NC_024150.1|_California_sea_lion_adenovirus_1_strain_Zc11-030,_complete_genome... at 0.0/31709aa/100%
+>Cluster 24
+0	31686aa, >gi|159034149|gb|EU111742.1|_Coronavirus_SW1,_complete_genome... *
+1	31686aa, >gi|187251953|ref|NC_010646.1|_Beluga_Whale_coronavirus_SW1,_complete_genome... at 0.0/31686aa/100%
+>Cluster 25
+0	31681aa, >gi|378554412|ref|NC_016895.1|_Bat_adenovirus_TJM,_complete_genome... *
+1	31681aa, >gi|289719040|gb|GU226970.1|_Bat_adenovirus_TJM,_complete_genome... at 0.0/31681aa/100%
+>Cluster 26
+0	31616aa, >gi|345462093|ref|NC_015932.1|_Bat_adenovirus_2,_complete_genome... *
+1	31616aa, >gi|343201197|gb|JN252129.1|_Bat_adenovirus_2_strain_PPV1,_complete_genome... at 0.0/31616aa/100%
+>Cluster 27
+0	31562aa, >gi|885766|gb|U18339.1|VVU18339_Variola_virus_Garcia-1966_right_near-terminal_region... *
+>Cluster 28
+0	31526aa, >gi|568319712|ref|AC_000192.1|_Murine_hepatitis_virus_strain_JHM,_complete_genome... *
+1	31473aa, >gi|225403280|gb|FJ647226.1|_Murine_coronavirus_MHV-JHM.IA,_complete_genome... at 0.0/31479aa/99.61%
+2	31448aa, >gi|225403260|gb|FJ647224.1|_Murine_coronavirus_MHV-3,_complete_genome... at 0.0/16040:8849:6401aa/91.43%
+3	31427aa, >gi|225403205|gb|FJ647219.1|_Murine_coronavirus_RJHM/A,_complete_genome... at 0.0/31433aa/99.55%
+4	31409aa, >gi|788265915|gb|KP887098.1|_UNVERIFIED:_Murine_coronavirus_strain_AM2,_complete_genome... at 0.0/25462:5943aa/93.66%
+5	31357aa, >gi|2641127|gb|AF029248.1|_Mouse_hepatitis_virus_strain_MHV-A59_C12_mutant,_complete_genome... at 0.0/25463:5943aa/93.88%
+6	31357aa, >gi|9629812|ref|NC_001846.1|_Murine_hepatitis_virus_strain_A59,_complete_genome... at 0.0/25463:5943aa/93.88%
+7	31335aa, >gi|51557240|gb|AY700211.1|_Murine_hepatitis_virus_strain_A59,_complete_genome... at 0.0/25463:5928aa/93.91%
+8	31294aa, >gi|530290987|gb|KF268336.1|_Murine_coronavirus_strain_MHV/BHKR_lab/USA/infA59_H126A/2012,_complete_... at 0.0/25442:5909aa/93.89%
+9	31294aa, >gi|530290999|gb|KF268337.1|_Murine_coronavirus_strain_MHV/BHKR_lab/USA/icA59_17Cl1/2012,_complete_g... at 0.0/25442:5909aa/93.84%
+10	31294aa, >gi|530291011|gb|KF268338.1|_Murine_coronavirus_strain_MHV/BHKR_lab/USA/icA59_L94P/2012,_complete_ge... at 0.0/25442:5909aa/93.84%
+11	31293aa, >gi|225403270|gb|FJ647225.1|_Murine_coronavirus_inf-MHV-A59,_complete_genome... at 0.0/25438:5912aa/93.9%
+12	31285aa, >gi|225403195|gb|FJ647218.1|_Murine_coronavirus_RA59/R13,_complete_genome... at 0.0/25440:5902aa/93.89%
+13	31283aa, >gi|225403238|gb|FJ647222.1|_Murine_coronavirus_SA59/RJHM,_complete_genome... at 0.0/25403:5892aa/98.32%
+14	31283aa, >gi|530291023|gb|KF268339.1|_Murine_coronavirus_strain_MHV/BHKR_lab/USA/icA59_ns2M/2012,_complete_ge... at 0.0/25438:5902aa/93.83%
+15	31277aa, >gi|226693979|gb|FJ884687.1|_Murine_hepatitis_virus_strain_A59_B12_variant,_complete_genome... at 0.0/25443:5894aa/93.9%
+16	31275aa, >gi|226693969|gb|FJ884686.1|_Murine_hepatitis_virus_strain_A59_B11_variant,_complete_genome... at 0.0/25443:5890aa/93.89%
+17	31250aa, >gi|225403292|gb|FJ647227.1|_Murine_coronavirus_repJHM/RA59,_complete_genome... at 0.0/25386:5894aa/97.5%
+18	31051aa, >gi|397136018|gb|JX169867.1|_Murine_coronavirus_strain_JHM.WU,_complete_genome... at 0.0/25285:5772aa/99.6%
+>Cluster 29
+0	31495aa, >gi|10442553|gb|AF275264.1|_Helicoverpa_zea_nuclear_polyhedrosis_virus_e66-like_protein_gene,_partia... *
+>Cluster 30
+0	31491aa, >gi|675803255|gb|KF636752.1|_Bat_Hp-betacoronavirus/Zhejiang2013,_complete_genome... *
+1	31491aa, >gi|693764258|ref|NC_025217.1|_Bat_Hp-betacoronavirus/Zhejiang2013,_complete_genome... at 0.0/31491aa/100%
+>Cluster 31
+0	31456aa, >gi|225403227|gb|FJ647221.1|_Murine_coronavirus_repA59/RJHM,_complete_genome... *
+1	31429aa, >gi|225403217|gb|FJ647220.1|_Murine_coronavirus_RA59/SJHM,_complete_genome... at 0.0/31447aa/99.17%
+2	31286aa, >gi|381354049|gb|JF792616.1|_Rat_coronavirus_isolate_681,_complete_genome... at 0.0/25096:2808:2259:404aa/90.9%
+3	31274aa, >gi|381354060|gb|JF792617.1|_Rat_coronavirus_isolate_8190,_complete_genome... at 0.0/25090:2727:2300:404aa/90.84%
+4	31250aa, >gi|253750530|ref|NC_012936.1|_Rat_coronavirus_Parker,_complete_genome... at 0.0/25087:2809:2261:404aa/91.12%
+5	31250aa, >gi|251748139|gb|FJ938068.1|_Rat_coronavirus_Parker,_complete_genome... at 0.0/25087:2809:2261:404aa/91.12%
+6	31233aa, >gi|7769351|gb|AF208067.1|_Murine_hepatitis_virus_strain_ML-10,_complete_genome... at 0.0/23133:5880aa/91.48%
+7	31161aa, >gi|380706987|gb|JQ173883.1|_Murine_hepatitis_virus_strain_S/3239-17,_complete_genome... at 0.0/24981:2625:2229aa/90.79%
+>Cluster 32
+0	31444aa, >gi|995626|emb|Z54206.1|_Bovine_herpesvirus_type_1_31-kb_DNA_(left_genome_end)... *
+>Cluster 33
+0	31428aa, >gi|293330422|dbj|AB551247.1|_Murine_hepatitis_virus_RNA,_complete_genome,_strain:_MHV-MI... *
+>Cluster 34
+0	31424aa, >gi|5918968|gb|AF168792.1|_Gallid_herpesvirus_1_ICP18.5_gene,_partial_cds;_DNA_binding_protein,_DNA_... *
+>Cluster 35
+0	31386aa, >gi|225403250|gb|FJ647223.1|_Murine_coronavirus_MHV-1,_complete_genome... *
+1	31147aa, >gi|298199702|gb|GU593319.1|_Murine_hepatitis_virus_strain_S,_complete_genome... at 0.0/21926:6405:2660aa/93.34%
+>Cluster 36
+0	31323aa, >gi|56160952|ref|AC_000020.1|_Canine_adenovirus_type_2,_complete_genome... *
+1	31323aa, >gi|1732265|gb|U77082.1|CAU77082_Canine_adenovirus_type_2_strain_Toronto_A26/61_complete_genome... at 0.0/31323aa/100%
+>Cluster 37
+0	31301aa, >gi|34223996|gb|AF036092.3|_Bovine_adenovirus_4_strain_THT/62,_complete_genome... *
+1	31301aa, >gi|34303903|ref|NC_002685.2|_Bovine_adenovirus_D,_complete_genome... at 0.0/31301aa/100%
+>Cluster 38
+0	31277aa, >gi|7739593|gb|AF207902.1|_Murine_hepatitis_virus_strain_ML-11_RNA-directed_RNA_polymerase_(orf1A),_... *
+1	31276aa, >gi|6625759|gb|AF201929.1|_Murine_hepatitis_virus_strain_2,_complete_genome... at 0.0/31277aa/99.8%
+2	31112aa, >gi|7769340|gb|AF208066.1|_Murine_hepatitis_virus_strain_Penn_97-1,_complete_genome... at 0.0/22585:5742:1661aa/94.54%
+>Cluster 39
+0	31249aa, >gi|741900922|gb|KM349743.1|_Betacoronavirus_HKU24_strain_HKU24-R05009I,_complete_genome... *
+1	31249aa, >gi|741900935|gb|KM349744.1|_Betacoronavirus_HKU24_strain_HKU24-R05010I,_complete_genome... at 0.0/31249aa/99.95%
+2	31249aa, >gi|744692653|ref|NC_026011.1|_Betacoronavirus_HKU24_strain_HKU24-R05005I,_complete_genome... at 0.0/31249aa/99.96%
+3	31249aa, >gi|741900909|gb|KM349742.1|_Betacoronavirus_HKU24_strain_HKU24-R05005I,_complete_genome... at 0.0/31249aa/99.96%
+>Cluster 40
+0	31169aa, >gi|569550047|gb|KF850449.2|_Rat_coronavirus_strain_mouse_lab/USA/MG6644_HOLMES10/1996,_partial_geno... *
+>Cluster 41
+0	31116aa, >gi|380750121|gb|JN874560.1|_Rabbit_coronavirus_HKU14_strain_HKU14-3,_complete_genome... *
+1	31100aa, >gi|394935448|ref|NC_017083.1|_Rabbit_coronavirus_HKU14,_complete_genome... at 0.0/31116aa/99.59%
+2	31100aa, >gi|380750109|gb|JN874559.1|_Rabbit_coronavirus_HKU14_strain_HKU14-1,_complete_genome... at 0.0/31116aa/99.59%
+3	31096aa, >gi|380750132|gb|JN874561.1|_Rabbit_coronavirus_HKU14_strain_HKU14-8,_complete_genome... at 0.0/31115aa/99.48%
+>Cluster 42
+0	31100aa, >gi|17529670|gb|AF220295.1|_Bovine_coronavirus_strain_Quebec,_complete_genome... *
+>Cluster 43
+0	31076aa, >gi|124294673|gb|DQ915164.2|_Bovine_coronavirus_isolate_Alpaca,_complete_genome... *
+1	31052aa, >gi|600997074|gb|KF906249.1|_Dromedary_camel_coronavirus_HKU23_strain_HKU23-265F,_complete_genome... at 0.0/31060aa/97.58%
+2	31052aa, >gi|600997084|gb|KF906250.1|_Dromedary_camel_coronavirus_HKU23_strain_HKU23-362F,_complete_genome... at 0.0/31060aa/97.6%
+3	31052aa, >gi|600997094|gb|KF906251.1|_Dromedary_camel_coronavirus_HKU23_strain_HKU23-368F,_complete_genome... at 0.0/31060aa/97.6%
+>Cluster 44
+0	31045aa, >gi|110825913|gb|DQ792570.1|_Simian_adenovirus_7,_complete_genome... *
+1	31044aa, >gi|218635403|emb|GM674129.1|_Sequence_29_from_Patent_EP1944043... at 0.0/31045aa/99.99%
+2	31044aa, >gi|930934838|dbj|HW666667.1|_JP_2013252144-A/5:_Simian_Adenovirus_Nucleic_Acid_and_Amino_Acid_Seque... at 0.0/31045aa/99.99%
+3	31044aa, >gi|186946576|dbj|DJ352116.1|_Methods_of_Generating_Chimeric_Adenoviruses_and_Uses_For_Such_Chimeric... at 0.0/31045aa/99.99%
+4	31044aa, >gi|338891955|dbj|HV031570.1|_JP_2011055835-A/5:_Simian_Adenovirus_Nucleic_Acid_and_Amino_Acid_Seque... at 0.0/31045aa/99.99%
+5	31044aa, >gi|930927634|dbj|HW833988.1|_JP_2015057052-A/5:_Simian_Adenovirus_Nucleic_Acid_and_Amino_Acid_Seque... at 0.0/31045aa/99.99%
+6	31044aa, >gi|83956609|dbj|DD170642.1|_Simian_Adenovirus_Nucleic_Acid_and_Amino_Acid_Sequences,_Vectors_Contai... at 0.0/31045aa/99.99%
+7	31044aa, >gi|930927626|dbj|HW833980.1|_JP_2015057051-A/5:_Simian_Adenovirus_Nucleic_Acid_and_Amino_Acid_Seque... at 0.0/31045aa/99.99%
+8	31044aa, >gi|58190994|emb|CQ982400.1|_Sequence_5_from_Patent_WO2005001103... at 0.0/31045aa/99.99%
