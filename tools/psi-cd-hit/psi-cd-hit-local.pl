@@ -52,6 +52,7 @@ sub parse_para_etc {
     if    ($arg eq "-i")          { $db_in     = shift; }
     elsif ($arg eq "-o")          { $db_out    = shift; }
     elsif ($arg eq "-outclstr")	  { $db_cl     = shift; }
+    elsif ($arg eq "-outout")	  { $db_outout = shift; }
     elsif ($arg eq "-l")          { $len_t     = shift; }
     ## thresholds
     elsif ($arg eq "-c")          { $NR_clstr  = shift; }
@@ -109,7 +110,7 @@ sub parse_para_etc {
 
   $db_clstr  = "$db_cl";
   $db_log    = "$db_out.log";
-  $db_out1   = "$db_out.out";
+  $db_out1   = "$db_outout";
   $seq_dir   = "$db_in-seq";
   $bl_dir    = "$db_in-bl";
   $restart_file   =" $db_out.restart";

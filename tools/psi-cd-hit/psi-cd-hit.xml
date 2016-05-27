@@ -6,15 +6,15 @@
     </stdio>
     <command interpreter="perl"><![CDATA[
         psi-cd-hit.pl -i "$input1" -o "$output1" -c $id
-		#if $moreoptions.options == "advanced"
-		-G $moreoptions.identity
-		-aL $moreoptions.alcovlong
-		-aS $moreoptions.alcovshort
-		-g $moreoptions.g
-		-circle $moreoptions.circle
-		-prog $moreoptions.prog
+		#if ($moreoptions.options == "advanced")
+			-G $moreoptions.identity
+			-aL $moreoptions.alcovlong
+			-aS $moreoptions.alcovshort
+			-g $moreoptions.g
+			-circle $moreoptions.circle
+			-prog $moreoptions.prog
 		#end if
-	-outclstr "$output2"
+		-outclstr "$outputclstr" -outout "$outputout"
     ]]></command>
     <inputs>
         <param type="data" name="input1" label="Redundant fasta file"  format="fasta" />
@@ -52,13 +52,14 @@
     </inputs>
     <outputs>
         <data name="output1" format="fasta" />
-	<data name="output2" format="clstr" />
+	<data name="outputclstr" format="clstr" />
+	<data name="outputout" format="txt" />
     </outputs>
     <tests>
         <test>
         	<param name="input1" value="input.fasta"/>
         	<param name="id" value="0.9"/>
-		<param name="moreoptions.options" value="simple"/>
+		<param name="moreoptions.options" value="advanced"/>
 		<param name="moreoptions.prog" value="megablast"/>
                 <param name="moreoptions.identity" value="1"/>
                 <param name="moreoptions.alcovlong" value="0"/>
@@ -66,7 +67,7 @@
                 <param name="moreoptions.g" value="1"/>
 		<param name="moreoptions.circle" value="0"/>
 		<output name="output1" file="output.fasta"/>
-	    	<output name="output2" file="output.clstr"/>
+	    	<output name="outputclstr" file="output.clstr"/>
         </test>
     </tests>
     <help><![CDATA[
