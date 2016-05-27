@@ -71,72 +71,51 @@
         </test>
     </tests>
     <help><![CDATA[
+**What it does**
+
+PSI-CD-HIT clusters proteins at very low threshold, it also cluster long DNA sequences, through blastp, blastn and metablast. PSI-cd-hit is a Perl script, which runs similar incremental algorithm like CD-HIT, but using BLAST to calculate similarities. Below are the procedures of PSI-CD-HIT:
+
+1. Sort sequences by decreasing length 
+
+2. First one is the first representative
+
+3. Using 1st one blast all remaining sequences, pick up its neighbors that meet the clustering threshold
+
+4. Repeat until done
+
 **Options** 
 
-  * input/output:
-    -i  in_dbname, required
-    -o  out_dbname, required
-    -l  length_of_throw_away_sequences, default 10
 
-  thresholds:
-    -c  clustering threshold (sequence identity), default 0.3
-    -ce clustering threshold (blast expect), default -1, 
-        it means by default it doesn't use expect threshold, 
-        but with positive value, the program cluster seqs if similarities
-        meet either identity threshold or expect threshold 
-    -G  (1/0) use global identity? default 1(global)
-        if you prefer to use -G 0(local), it is suggested that you also
-        use -aS, -aL, such as -aS 0.8, to prevent very short matches.
-    -aL	alignment coverage for the longer sequence, default 0.0
- 	if set to 0.9, the alignment must covers 90% of the sequence
-    -aS	alignment coverage for the shorter sequence, default 0.0
- 	if set to 0.9, the alignment must covers 90% of the sequence
-    -g  (1/0), default 0
-        by cd-hit's default algorithm, a sequence is clustered to the first 
-        cluster that meet the threshold (fast cluster). If set to 1, the program
-        will cluster it into the most similar cluster that meet the threshold
-        (accurate but slow mode)
-        but either 1 or 0 won't change the representatives of final clusters
-    -circle (1/0), default 0
-        when set to 1, treat sequences as circular sequence.
-        bacterial genomes, plasmids are circular, but their genome coordinate maybe arbitary, 
+* Input/output:
+
+Input a redundant fasta file to cluster.
+
+There are three output files:
+
+1. A fasta file of representative sequences
+
+2. A clstr file with the list of clusters
+
+3. A txt file
+
+
+* Thresholds:
+
+-c : clustering threshold (sequence identity), default 0.3
+
+-G : (1/0) use global identity? default 1(global). If you prefer to use -G 0(local), it is suggested that you also use -aS, -aL, such as -aS 0.8, to prevent very short matches.
+
+-aL : alignment coverage for the longer sequence, default 0.0. If set to 0.9, the alignment must covers 90% of the sequence
+
+-aS : alignment coverage for the shorter sequence, default 0.0. If set to 0.9, the alignment must covers 90% of the sequence
+
+-g : (1/0), default 0. By cd-hit's default algorithm, a sequence is clustered to the first cluster that meet the threshold (fast cluster). If set to 1, the program will cluster it into the most similar cluster that meet the threshold (accurate but slow mode), but either 1 or 0 won't change the representatives of final clusters
+
+-circle : (1/0), default 0. When set to 1, treat sequences as circular sequence. Bacterial genomes, plasmids are circular, but their genome coordinate maybe arbitary, 
         
-   program:
-     -prog (blastp, blastn, megablast, blastpgp), default blastp 
-     -p  profile search para, default
-           "-j 3 -F F -e 0.001 -b 500 -v 500"
-     -dprof database for building PSSM, default using input
-         you can also use another database that is more comprehensive like NR80
-     -s  blast search para, default
-           "-F F -e 0.000001 -b 100000 -v 100000"
-     -bs (1/0) default 1
-        pipe blast results from into parser instead of save in hard drive (save time)
+* Program:
 
-   compute:
-     -exec (qsub, local) default local
-          this program writes a shell script to run blast, this script is
-          either performed locally by sh or remotely by qsub
-          with qsub, you can use PBS, SGE etc
-     -host number of hosts for qsub 
-     -core number of cpu cores per computer, default 1
-     -shf a filename for add local settings into the job shell script
-          for example, when you run PBS jobs, you can add quene name etc in this
-	  file and this script will add them into the job shell script
-  job:
-    -rs steps of save restart file and clustering output, default 5000
-        everytime after process 5000 sequences, program write a 
-        restart file and current clustering information
-    -restart restart file, readin a restart file
-        if program crash, stoped, termitated, you can restart it by
-        add a option "-restart sth.restart"
-    -rf steps of re format blast database, default 200,000
-        if program clustered 200,000 seqs, it remove them from seq
-        pool, and re format blast db to save time
-    -J  job, job_file, exe specific jobs like parse blast outonly
-        DON'T use it, it is only used by this program itself
-    -k (1/0) keep blast raw output file, default 0
-
-    -P path to executables
+-prog : (blastp, blastn, megablast, blastpgp), default blastp 
 
  ]]></help>
     <citations>
