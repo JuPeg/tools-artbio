@@ -51,6 +51,7 @@ sub parse_para_etc {
     ## input/output:
     if    ($arg eq "-i")          { $db_in     = shift; }
     elsif ($arg eq "-o")          { $db_out    = shift; }
+    elsif ($arg eq "-outclstr")	  { $db_cl     = shift; }
     elsif ($arg eq "-l")          { $len_t     = shift; }
     ## thresholds
     elsif ($arg eq "-c")          { $NR_clstr  = shift; }
@@ -106,7 +107,7 @@ sub parse_para_etc {
   (-e $db_in) || die "No input";
   ($db_out)   || die "No output";
 
-  $db_clstr  = "$db_out.clstr";
+  $db_clstr  = "$db_cl";
   $db_log    = "$db_out.log";
   $db_out1   = "$db_out.out";
   $seq_dir   = "$db_in-seq";
@@ -301,7 +302,7 @@ sub read_restart {
 
 sub write_db_clstr {
   my ($i0, $i, $j, $k);
-
+ 
   my @NR90_seq = ();
   for ($i=0; $i<$NR90_no; $i++) { $NR90_seq[$i] = []; }
   for ($i0=0; $i0<$NR_no; $i0++) {
@@ -311,7 +312,6 @@ sub write_db_clstr {
     next unless ($j < $NR90_no);
     push(@{$NR90_seq[$j]}, $i);
   }
-
   open(DBCLS, "> $db_clstr") || die "Can not write $db_clstr";
   for ($i=0; $i<$NR90_no; $i++) {
     print DBCLS ">Cluster $i\n";
@@ -963,9 +963,7 @@ EOD
 sub  run_batch_blast3 {
   my $i0 = shift;
   my ($id, $i, $j, $k);
- 
   my $total_jobs = $batch_no_per_node * $host_no * $core_no;
-
   for ($k=0; $i0<$NR_no; $i0++) {
     $id = $NR_idx[$i0];
     next if ($passeds[$id]);
@@ -1014,7 +1012,7 @@ cd $pwd
 EOD
 
   for ($k=0; $k<$core_no; $k++){
-    print RESH "./$remote_perl_script $k&\n"
+    print RESH "perl $remote_perl_script $k&\n"
   }
   print RESH "wait\n\n";
 
@@ -1026,8 +1024,8 @@ EOD
 sub write_remote_perl_script {
   my $dir1 = ".";
   my $bl2  = ($prof_db) ?
-     "$blast_exe -d $dir1/$tmp_db $bl_para -R $bl_dir/\$id.prof":
-     "$blast_exe -d $dir1/$tmp_db $bl_para";
+     "$blast_exe -d $tmp_db $bl_para -R $bl_dir/\$id.prof":
+     "$blast_exe -d $tmp_db $bl_para";
   my $cc = ($prof_db) ? 1 : 0;
   if ($prof_db) { my $cmd=`formatdb -i $prof_db`; }
 
@@ -1057,7 +1055,6 @@ else {
 }
 
 foreach \$id (\@ids) {
-
   next unless (-e "$seq_dir/\$id");
   next if (-e "$seq_dir/\$id.lock");
   \$cmd = `touch $seq_dir/\$id.lock`;

@@ -14,6 +14,7 @@
 		-circle $moreoptions.circle
 		-prog $moreoptions.prog
 		#end if
+	-outclstr "$output2"
     ]]></command>
     <inputs>
         <param type="data" name="input1" label="Redundant fasta file"  format="fasta" />
