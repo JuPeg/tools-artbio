@@ -281,7 +281,7 @@ def __main__():
 		E = Eutils(options, logger)
 		E.retrieve()
     except ValueError :
-	print "Retrieving without sequence length binning"
+	print "Error parsing bins limits. Retrieving without sequence length binning"
 	E=Eutils(options,logger)
 	E.retrieve()
 
