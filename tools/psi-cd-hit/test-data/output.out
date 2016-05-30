@@ -1,0 +1,17 @@
+Started Fri May 27 11:31:12 CEST 2016
+Total seqs 127 in test-data/input.fasta
+Started Fri May 27 12:10:16 CEST 2016
+Total seqs 127 in test-data/input.fasta
+Started Fri May 27 12:11:38 CEST 2016
+Total seqs 127 in test-data/input.fasta
+Started Fri May 27 12:12:27 CEST 2016
+Total seqs 127 in test-data/input.fasta
+Started Fri May 27 12:12:56 CEST 2016
+Total seqs 127 in test-data/input.fasta
+Started Fri May 27 13:05:47 CEST 2016
+Total seqs 127 in test-data/input.fasta
+..........100 finished 40 clusters 108 passed 40/108 clstr/passed 85.03% done 11.91 cpu
+..127 finished 45 clusters 127 passed 5/19 clstr/passed 100% done 13.85 cpu
+Completed Fri May 27 13:06:10 CEST 2016
+
+Total CPUs on remote hosts: 0
