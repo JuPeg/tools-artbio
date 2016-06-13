@@ -32,6 +32,7 @@ import urllib
 import urllib2
 import httplib
 import re
+from socket import error as SocketError
 
 class Eutils:
 
@@ -50,6 +51,7 @@ class Eutils:
         self.count = 0
         self.webenv = ""
         self.query_key = ""
+
 
     def retrieve(self):
         """ """
@@ -77,6 +79,7 @@ class Eutils:
             if '</Count>' in line:
                 self.count = int(line[line.find('<Count>')+len('<Count>') : line.find('</Count>')])
         self.logger.info("Founded %d UIDs" % self.count)
+        return self.count
 
     def get_uids_list(self):
         """
@@ -177,10 +180,23 @@ class Eutils:
             except httplib.IncompleteRead as e:
                 serverTransaction = False
                 self.logger.info("IncompleteRead error:  %s" % ( e.partial ) )
+            except urllib2.URLError as e:
+                print "EXCEPT"
+                serverTransaction = False
+                self.logger.info("No route to host: %s" % ( e.errno ) )
+            except SocketError as e:
+                if e.errno != errno.ECONNRESET:
+                    raise  # Not error we are looking for
+                print "UH OH"
+                serverTransaction = False
+                self.logger.info("Connection reset by peer: %s\n Try to reconnect" % (e.errno))
+                data = urllib.urlencode(values)
+                req = urllib2.Request(url, data)
+
         fasta = self.sanitiser(self.dbname, fasta) #
         time.sleep(1)
         return fasta
-        
+
     def sanitiser(self, db, fastaseq):
         if db not in "nuccore protein" : return fastaseq
         regex = re.compile(r"[ACDEFGHIKLMNPQRSTVWYBZ]{49,}")
@@ -210,7 +226,7 @@ class Eutils:
                 fastalines[0] = fastalines[0].replace("[", "_")
                 fastalines[0] = fastalines[0].replace("]", "_")
                 fastalines[0] = fastalines[0].replace("=", "_")
-                fastalines[0] = fastalines[0].rstrip("_") # because blast makedb doesn't like it 
+                fastalines[0] = fastalines[0].rstrip("_") # because blast makedb doesn't like it
                 fastalines[0] = re.sub(regex, "_", fastalines[0])
                 cleanseq = "\n".join(fastalines)
                 sane_seqlist.append(cleanseq)
@@ -257,7 +273,6 @@ def __main__():
     parser.add_option('-l', '--logfile', help='log file (default=stderr)')
     parser.add_option('--loglevel', choices=LOG_LEVELS, default='INFO', help='logging level (default: INFO)')
     parser.add_option('-d', dest='dbname', help='database type')
-    parser.add_option('--bins', dest='bins', help='bins limits (separate values with space)')
     (options, args) = parser.parse_args()
     if len(args) > 0:
         parser.error('Wrong number of arguments')
@@ -272,18 +287,8 @@ def __main__():
     logging.basicConfig(**kwargs)
     logger = logging.getLogger('data_from_NCBI')
 
-    query=options.query_string
-    try:
-	bins=map(int,options.bins.split(" "))
-	for i in range(len(bins)-1):
-		options.query_string=query+" AND "+str(bins[i]+1)+":"+str(bins[i+1])+"[Sequence Length]"
-		print options.query_string
-		E = Eutils(options, logger)
-		E.retrieve()
-    except ValueError :
-	print "Error parsing bins limits. Retrieving without sequence length binning"
-	E=Eutils(options,logger)
-	E.retrieve()
+    E = Eutils(options, logger)
+    E.retrieve()
 
 if __name__ == "__main__":
     __main__()
