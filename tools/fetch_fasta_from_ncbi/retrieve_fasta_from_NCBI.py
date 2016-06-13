@@ -186,6 +186,9 @@ class Eutils:
                 self.logger.info("No route to host: %s" % ( e.errno ) )
             except SocketError as e:
                 if e.errno != errno.ECONNRESET:
+                    print "OUPS"
+                    serverTransaction = False
+                    self.logger.info("Connection error: %s" % (e.errno))
                     raise  # Not error we are looking for
                 print "UH OH"
                 serverTransaction = False
